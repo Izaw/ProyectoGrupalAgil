@@ -48,39 +48,53 @@ const mostrarCursos = () => {
     })
 }
 
-const mostrarUsuarioId = (documentoIdentidad) => {
-    listarUsuarios();
-    let usuario = listaUsuarios.find(usu => usu.documentoIdentidad == documentoIdentidad)
-    if (!usuario) {
-        console.log('No existe el Usuario buscado');        
+const mostrarCursoId = (idCurso) => {
+    listarCursos();
+    let curso = listaCursos.find(cur => cur.idCurso == idCurso)
+    if (!curso) {
+        console.log('No existe el Curso buscado');        
     }else{
-        console.log('Estudiante Buscado Identificado: ' + usuario.documentoIdentidad);
-        console.log(usuario.nombreCompleto);
-        console.log(usuario.correoElectronico);
-        console.log(usuario.telefono);
-        console.log(usuario.rol);     
+        console.log('Curso Buscado Identificado: ' + curso.idCurso);
+        console.log(curso.nombreCompleto);
+        console.log(curso.descripcion);
+        console.log(curso.valor);
+        console.log(curso.modalidad);
+        console.log(curso.intensidadHoraria);      
     }
 }
 
-const actualizarUsuario = (documentoIdentidad, nombreCompleto, correoElectronico, telefono, rol) =>{
-    listarUsuarios();
-    let usuario = listaUsuarios.find(usu => usu.documentoIdentidad == documentoIdentidad)
-    if (!usuario) {
-        console.log('No existe el usuario');        
+const actualizarCurso = (idCurso, nombreCompleto, descripcion, valor, modalidad, intensidadHoraria) =>{
+    listarCursos();
+    let curso = listaCursos.find(cur => cur.idCurso == idCurso)
+    if (!curso) {
+        console.log('No existe el curso');        
     }else{
-        usuario[nombreCompleto] = nombreCompleto;
-        usuario[nombreCompleto] = correoElectronico;
-        usuario[telefono] = telefono;
-        usuario[rol] = rol;
-        guardarUsuario();
+        curso[idCurso] = idCurso;
+        curso[nombreCompleto] = correoElectronico;
+        curso[descripcion] = descripcion;
+        curso[valor] = valor;
+        curso[modalidad] = modalidad;
+        curso[intensidadHoraria] = intensidadHoraria;
+        guardarCurso();
+    }
+}
+
+const eliminarCurso = (idCurso) => {
+    listarCursos();
+    let nuevo = listaCursos.filter(cur => cur.idCurso != idCurso );
+    if (nuevo.length == listaCursos.length){
+        console.log('Ningun curso tiene el id indicado');
+    }else{
+        listaCursos = nuevo;
+        guardarCurso();
     }
 }
 
 
 module.exports = {
-    crearUsuario,
-    mostrarUsuarios,
-    mostrarUsuarioId,
-    actualizarUsuario,
-    actualizarUsuario
+    crearCurso,
+    mostrarCursos,
+    mostrarCursoId,
+    actualizarCurso,
+    eliminarCurso
 }

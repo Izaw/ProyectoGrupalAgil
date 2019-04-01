@@ -74,11 +74,22 @@ const actualizarUsuario = (documentoIdentidad, nombreCompleto, correoElectronico
     }
 }
 
+const eliminarUsuario = (documentoIdentidad) => {
+    listarUsuarios();
+    let nuevo = listaUsuarios.filter(usu => usu.documentoIdentidad != documentoIdentidad );
+    if (nuevo.length == listaUsuarios.length){
+        console.log('Ningún usuario tiene la identificación indicada');
+    }else{
+        listaUsuarios = nuevo;
+        guardarUsuario();
+    }
+}
+
 
 module.exports = {
     crearUsuario,
     mostrarUsuarios,
     mostrarUsuarioId,
     actualizarUsuario,
-    actualizarUsuario
+    eliminarUsuario
 }

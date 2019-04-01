@@ -1,9 +1,11 @@
 const {argv} = require('./yargs');
 const funcionesUsuarios = require('./funcionesUsuarios');
+const funcionesCursos = require('./funcionesCursos');
 
 let comando = argv._[0];
 
 switch(comando){
+    // Acciones Usuarios
     case 'crearUsuario':
     funcionesUsuarios.crearUsuario(argv);
     break
@@ -20,20 +22,29 @@ switch(comando){
     funcionesUsuarios.actualizarUsuario(argv.documentoIdentidad, argv.nombreCompleto, argv.correoElectronico, argv.telefono, argv.rol);
     break
 
+    case 'eliminarUsuario':
+    funcionesUsuarios.eliminarUsuario(argv.documentoIdentidad);
+    break
+
+     // Acciones Cursos
     case 'crearCurso':
-    funcionesUsuarios.crearCurso(argv);
+    funcionesCursos.crearCurso(argv);
     break
 
     case 'mostrarCursos':
-    funcionesUsuarios.mostrarCursos();
+    funcionesCursos.mostrarCursos();
     break
 
     case 'mostrarCursoId':
-    funcionesUsuarios.mostrarCursoId(argv.documentoIdentidad);
+    funcionesCursos.mostrarCursoId(argv.idCurso);
     break
 
     case 'actualizarCurso':
-    funcionesUsuarios.actualizarCurso(argv.documentoIdentidad, argv.nombreCompleto, argv.correoElectronico, argv.telefono, argv.rol);
+    funcionesCursos.actualizarCurso(argv.idCurso, argv.nombreCompleto, argv.correoElectronico, argv.telefono, argv.rol);
+    break
+
+    case 'eliminarCurso':
+    funcionesCursos.eliminarCurso(argv.idCurso);
     break
 
     default:
