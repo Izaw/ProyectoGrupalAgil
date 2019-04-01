@@ -1,0 +1,22 @@
+{
+  "name": "proyectogrupalagil",
+  "version": "1.0.0",
+  "description": "Proyecto grupal curso",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Izaw/ProyectoGrupalAgil.git"
+  },
+  "author": "Carlos Vasco vasco.1019@gmail.com, Elizabeth Muñoz emunoz2793@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Izaw/ProyectoGrupalAgil/issues"
+  },
+  "homepage": "https://github.com/Izaw/ProyectoGrupalAgil#readme",
+  "dependencies": {
+    "yargs": "^13.2.2"
+  }
+}
