@@ -21,7 +21,7 @@ const crearUsuario = (usuarioParam) => {
 
 const listarUsuarios = () => {
     try{
-        listaUsuarios = require('./listado.json')
+        listaUsuarios = require('./listadoUsuario.json')
     }catch(error){
         listaUsuarios = [];
     }
@@ -29,7 +29,7 @@ const listarUsuarios = () => {
 
 const guardarUsuario = () => {
     let datos = JSON.stringify(listaUsuarios);
-    fs.writeFile('listado.json',datos,(err) =>{
+    fs.writeFile('listadoUsuario.json',datos,(err) =>{
         if (err) throw (err);
         console.log('Usuario Creado');        
     })

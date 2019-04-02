@@ -1,0 +1,16 @@
+[{
+    "idCurso": "1",
+    "nombreCompleto": "Inglés",
+    "descripcion": "Curso Inglés",
+    "valor": "150000",
+    "modalidad": "Virtual",
+    "intensidadHoraria": "180"
+},
+{
+    "idCurso": "2",
+    "nombreCompleto": "Matematicas",
+    "descripcion": "Algreba básica",
+    "valor": "260000",
+    "modalidad": "Virtual",
+    "intensidadHoraria": "80"
+}]

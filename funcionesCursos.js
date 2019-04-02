@@ -70,7 +70,7 @@ const actualizarCurso = (idCurso, nombreCompleto, descripcion, valor, modalidad,
         console.log('No existe el curso');        
     }else{
         curso[idCurso] = idCurso;
-        curso[nombreCompleto] = correoElectronico;
+        curso[nombreCompleto] = nombreCompleto;
         curso[descripcion] = descripcion;
         curso[valor] = valor;
         curso[modalidad] = modalidad;
