@@ -2,7 +2,7 @@
   "name": "proyectogrupalagil",
   "version": "1.0.0",
   "description": "Proyecto grupal curso",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/Izaw/ProyectoGrupalAgil#readme",
   "dependencies": {
-    "yargs": "^13.2.2"
+    "boostrap": "^2.0.0",
+    "express": "^4.16.4",
+    "hbs": "^4.0.3"
   }
 }

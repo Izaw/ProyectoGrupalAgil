@@ -1,8 +1,7 @@
-const {argv} = require('./yargs');
 const funcionesUsuarios = require('./funcionesUsuarios');
 const funcionesCursos = require('./funcionesCursos');
 
-let comando = argv._[0];
+/*let comando = '';
 
 switch(comando){
     // Acciones Usuarios
@@ -49,4 +48,4 @@ switch(comando){
 
     default:
     console.log('No ingresó comando')
-}
+}*/
